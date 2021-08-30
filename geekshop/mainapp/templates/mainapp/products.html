@@ -3,6 +3,7 @@
 
 {% block styles %}
         <link rel="stylesheet" type="text/css" href="{% static 'mainapp/style.css' %}">
+		<link rel="stylesheet" type="text/css" href="{% static 'geekshop/style.css' %}">
 {% endblock %}
 
 
@@ -10,9 +11,10 @@
 <div class="hero-white">
     {% include 'geekshop/includes/inc_main_menu.html' %}
 </div>
-    {% include 'mainapp/includes/inc_category_menu.html' %}
-<div class="details">
-<div class="details-products">
+   <div class="details">
+			{% include 'mainapp/includes/inc_category_menu.html' %}
+
+			<div class="details-products">
 				<div class="details-slider">
 					<div class="slider-product text-center">
 						<img src="/media/{{hot_product.image}}">
@@ -48,11 +50,27 @@
 					</div>
 				</div>
 			</div>
-
+		{% if products %}
 		<div class="featured mt-5">
-			<h2>
-			  Категория: "{{ category.name|title }}"
-			</h2>
+			{% if category %}
+				<h2>Категория: {{ category.name|title }}</h2>
+			{% endif %}
+			<div class="paginator">
+			  {% if products.has_previous %}
+				<a href="{% url 'products:page' category.pk products.previous_page_number %}">
+				  <
+				</a>
+			  {% endif %}
+			  <span class="current">
+				страница {{ products.number }} из
+				{{ products.paginator.num_pages }}
+			  </span>
+			  {% if products.has_next %}
+				<a href="{% url 'products:page' category.pk products.next_page_number %}">
+				  >
+				</a>
+			  {% endif %}
+			</div>
 			<div class="featured-menu">
 				<a class="active" href="#">Популярные</a><a href="#">Новинки</a>
 			</div>
@@ -103,4 +121,7 @@
 				</div>
 			</div>
 		</div>
+	{% else %}
+
+	{% endif %}
 {% endblock %}
