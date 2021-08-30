@@ -6,7 +6,7 @@ https://docs.djangoproject.com/en/3.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
-import os.path
+import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -17,7 +17,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-j6iiqig2hg5qyefhu#tljiebkkhu(@m1d36(wi9t!xd(=in7iz'
+SECRET_KEY = 'django-insecure-l621^$b#%&j+54ghkz7747bx6*xgdbbk+526vmsn*f)8@0rcp#'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'mainapp',
     'authapp',
     'basketapp',
+    'adminapp',
 ]
 
 MIDDLEWARE = [
@@ -123,15 +124,17 @@ USE_TZ = False
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'geekshop', 'static'),
-    os.path.join(BASE_DIR, 'basketapp', 'static'),
+    os.path.join(BASE_DIR, "geekshop", "static"),
+    os.path.join(BASE_DIR, "basketapp", "static"),
 )
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
 LOGIN_URL = '/auth/login/'
