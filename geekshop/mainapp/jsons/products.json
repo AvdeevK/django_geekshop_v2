@@ -1,0 +1,57 @@
+[
+  {
+    "category": "стулья",
+    "name": "красный стул",
+    "image": "product_images/product-4.jpg",
+    "short_desc": "",
+    "description": "",
+    "price": "3600.00",
+    "quantity": 50
+  },
+  {
+    "category": "модерн",
+    "name": "Светильник-сфера",
+    "image": "product_images/product-1.jpg",
+    "short_desc": "",
+    "description": "",
+    "price": "1800.00",
+    "quantity": 20
+  },
+{
+      "category": "классика",
+      "name": "комплект стульев",
+      "image": "product_images/product-21.jpg",
+      "short_desc": "для гостинной",
+      "description": "",
+      "price": "7600.00",
+      "quantity": 23
+  },
+  {
+      "category": "модерн",
+      "name": "кресло из синей экокожи",
+      "image": "product_images/product-2.jpg",
+      "short_desc": "уникальный дизайн для вашего офиса",
+      "description": "",
+      "price": "8300.00",
+      "quantity": 16
+  },
+  {
+
+      "category": "офис",
+      "name": "софтбокс для офиса",
+      "image": "product_images/product-2-sm.jpg",
+      "short_desc": "контурный свет для ваших переговоров",
+      "description": "",
+      "price": "2300.00",
+      "quantity": 15
+  },
+  {
+      "category": "дом",
+      "name": "диван-книжка",
+      "image": "product_images/product-3-sm.jpg",
+      "short_desc": "",
+      "description": "",
+      "price": "12000.00",
+      "quantity": 8
+  }
+]
